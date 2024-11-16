@@ -9,3 +9,12 @@ resource "aws_vpc" "atlantis-vpc1" {
     Name = "VPC2"
   }
 }
+
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-test-bucket-atlantis"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
