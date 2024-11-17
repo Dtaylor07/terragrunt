@@ -8,3 +8,7 @@ module "vpc-1" {
   igw-name          = "my-igw"
   vpc-name          = "vpc-module"
 }
+
+include {
+    path = find_in_parent_folders()
+}
